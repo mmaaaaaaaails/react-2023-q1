@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  margin-top: 30px;
+
+  &:hover .title {
+    color: cornflowerblue;
+    transition: all .2s ease-out;
+    cursor: pointer;
+  }
+}
+
+.img {
+  border-radius: 10px;
+  object-fit: cover;
+  height: 248px;
+}
+
+
+.title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: mediumslateblue;
+  margin: 16px 0;
+}
+
+.desc {
+  font-weight: 400;
+  font-size: 14px;
+  color: gray;
+  line-height: 24px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+
+  &__item {
+    display: flex;
+    margin-right: 24px;
+  }
+
+  &__img {
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 448px;
+  }
+}

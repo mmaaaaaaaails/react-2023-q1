@@ -18,3 +18,11 @@
   text-decoration: none;
   margin-right: 20px;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 30px;
+}
+
+
