@@ -1,8 +1,9 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 import styles from './home.module.scss';
 import Card, {ICard}  from './Card';
 import axios from 'axios';
+import Search from './Search';
+import Header from './Header';
 
 class Home extends React.Component<unknown> {
 
@@ -27,16 +28,15 @@ class Home extends React.Component<unknown> {
 
         return (
             <>
-                <header className={styles.header}>
-                    <NavLink
-                        className={(e) => (e.isActive ? styles.active : styles.header_link)}
-                        to='/'>
-                        Home
-                    </NavLink>
-                    <NavLink className={styles.header_link} to='/about'>About</NavLink>
-                </header>
+                <Header
+                    pageJump={'/About'}
+                    nameJump={'About'}
+                    pageCurrent={'/'}
+                    nameCurrent={'Home'}
+                />
                 <div>
                     <h4 className={styles.title}>This is a Home Page</h4>
+                    <Search/>
                     <div className={styles.wrapper}>
                         {
                             this.state.card.map((obj: ICard) => {

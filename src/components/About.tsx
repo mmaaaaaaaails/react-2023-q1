@@ -1,22 +1,20 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 import styles from './about.module.scss';
+import Header from './Header';
 
-class About extends React.Component<any> {
+class About extends React.Component<unknown> {
 
     render() {
         return (
             <>
-                <header className={styles.header}>
-                    <NavLink className={styles.header_link} to='/'>Home</NavLink>
-                    <NavLink
-                        className={(e) => (e.isActive ? styles.active : styles.header_link)}
-                        to='/about'>
-                        About
-                    </NavLink>
-                </header>
+                <Header
+                    pageJump={'/'}
+                    nameJump={'Home'}
+                    pageCurrent={'/about'}
+                    nameCurrent={'About'}
+                />
                 <div>
-                    <h4>This is a About us Page</h4>
+                    <h4 className={styles.title}>This is a About us Page</h4>
                 </div>
             </>
         );
