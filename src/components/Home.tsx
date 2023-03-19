@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './home.module.scss';
-import Card from './Card';
+import Card, {ICard}  from './Card';
 import axios from 'axios';
 
-class Home extends React.Component<any, any> {
+class Home extends React.Component<unknown> {
 
     state = {
         card: []
@@ -36,10 +36,10 @@ class Home extends React.Component<any, any> {
                     <NavLink className={styles.header_link} to='/about'>About</NavLink>
                 </header>
                 <div>
-                    <h4>This is a Home Page</h4>
+                    <h4 className={styles.title}>This is a Home Page</h4>
                     <div className={styles.wrapper}>
                         {
-                            this.state.card.map((obj: any) => {
+                            this.state.card.map((obj: ICard) => {
                                 return (
                                     <Card
                                         key={obj.id}
@@ -48,6 +48,7 @@ class Home extends React.Component<any, any> {
                                         likes={obj.likes}
                                         comments={obj.comments}
                                         image = {obj.image}
+                                        id={obj.id}
                                     />)
                             })
                         }

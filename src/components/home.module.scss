@@ -19,10 +19,22 @@
   margin-right: 20px;
 }
 
+.title {
+  margin-top: 20px;
+}
+
 .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  padding: 20px;
 }
 
 
+@media (max-width: 425px) {
+  .wrapper {
+    padding: 10px;
+  }
+}

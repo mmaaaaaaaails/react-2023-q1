@@ -3,12 +3,13 @@ import styles from './card.module.scss';
 import favorite from '../assets/images/favorite.svg';
 import chat from '../assets/images/chat.svg';
 
-interface ICard {
+export interface ICard {
     image: string;
     name: string;
     description: string;
     likes: number;
     comments: number;
+    id: number;
 }
 
 class Card extends React.Component<ICard> {
