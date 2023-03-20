@@ -16,7 +16,7 @@ class Search extends React.Component<unknown> {
         localStorage.setItem('value', this.state.value);
     };
 
-    componentDidMount() {
+    componentWillUnmount() {
         const value = localStorage.getItem('value');
         this.setState({ value });
     }
