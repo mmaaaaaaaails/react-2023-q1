@@ -15,12 +15,11 @@ class Home extends React.Component<unknown> {
         try {
             const response = await axios.get('card.json');
             const data = response.data;
-            console.log(data)
             this.setState({
                 card: data
             });
-        } catch (e) {
-            console.log('error => ', e)
+        } catch {
+            throw new Error('error');
         }
     }
 

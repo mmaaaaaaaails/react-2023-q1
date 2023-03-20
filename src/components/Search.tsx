@@ -3,15 +3,39 @@ import styles from './search.module.scss';
 
 class Search extends React.Component<unknown> {
 
+    state = {
+        value: ''
+    }
+
+    handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+        this.setState({value: e.currentTarget.value })
+    }
+
+    handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        localStorage.setItem('value', this.state.value);
+    };
+
+    componentDidMount() {
+        const value = localStorage.getItem('value');
+        this.setState({ value });
+    }
+
     render() {
         return (
-            <div className={styles.content}>
+            <form
+                onSubmit={this.handleFormSubmit}
+                className={styles.content}
+            >
+                <label htmlFor="search"/>
                 <input
+                    value={this.state.value}
+                    onChange={this.handleChange}
                     className={styles.input}
                     type="text"
                     placeholder="Search bar"
                 />
-            </div>
+            </form>
         );
     }
 }
