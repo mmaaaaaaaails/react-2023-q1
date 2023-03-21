@@ -27,12 +27,7 @@ class Home extends React.Component<unknown> {
 
         return (
             <>
-                <Header
-                    pageJump={'/About'}
-                    nameJump={'About'}
-                    pageCurrent={'/'}
-                    nameCurrent={'Home'}
-                />
+                <Header/>
                 <div>
                     <h4 className={styles.title}>This is a Home Page</h4>
                     <Search/>
