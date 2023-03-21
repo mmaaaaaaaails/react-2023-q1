@@ -1,13 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import './App.css'
+import styles from './app.module.scss'
 import Home from './components/Home'
 import About from './components/About'
 import NotFoundPage from './components/NotFoundPage'
 
 function App() {
   return (
-    <div className='App'>
+    <div className={styles.app}>
         <Routes>
             <Route path='/' element={ <Home/> } />
             <Route path='about' element={ <About/> } />
