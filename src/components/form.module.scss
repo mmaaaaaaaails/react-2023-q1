@@ -1,0 +1,70 @@
+.wrapper {
+  background-color: #ace5cf;
+  padding: 20px 0 80px;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px 14px;
+  margin: 20px auto;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.input {
+  background: #F9F9F9;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  margin: 6px 0 20px;
+  width: 100%;
+}
+
+.checkbox {
+  position: relative;
+  font-size: 12px;
+
+  &_input {
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+}
+
+.radio {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &_label {
+    font-weight: bold;
+    position: relative;
+    margin-left: 20px;
+  }
+
+  &_circle {
+    margin-left: 6px;
+    position: absolute;
+    left: -26px;
+    top: 4px;
+  }
+}
+
+.button {
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+}
