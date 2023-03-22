@@ -1,13 +1,14 @@
 .wrapper {
   background-color: #ace5cf;
   padding: 20px 0 80px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   max-width: 240px;
+  max-height: 580px;
   border-radius: 20px;
   background-color: #fff;
   padding: 20px 14px;
@@ -60,6 +61,11 @@
   }
 }
 
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .button {
   margin-top: 20px;
   outline: none;
@@ -67,4 +73,5 @@
   border-radius: 8px;
   padding: 10px;
   font-weight: bold;
+  cursor: pointer;
 }
