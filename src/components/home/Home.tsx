@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './home.module.scss';
-import Card, {ICard}  from './Card';
+import Card from '../card/Card';
 import axios from 'axios';
-import Search from './Search';
-import Header from './Header';
+import Search from '../search/Search';
+import Header from '../header/Header';
+import {ICard} from '../../utils/interface';
 
 class Home extends React.Component<unknown> {
 

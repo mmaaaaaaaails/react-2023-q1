@@ -1,10 +1,10 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import styles from './app.module.scss'
-import Home from './components/Home'
-import About from './components/About'
-import NotFoundPage from './components/NotFoundPage'
-import Form from './components/Form';
+import Home from './components/home/Home'
+import About from './components/about/About'
+import NotFoundPage from './components/notFound/NotFoundPage'
+import Form from './components/form/Form';
 
 function App() {
   return (

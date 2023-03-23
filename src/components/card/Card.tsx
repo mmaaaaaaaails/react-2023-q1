@@ -1,16 +1,8 @@
 import React from 'react';
 import styles from './card.module.scss';
-import favorite from '../assets/images/favorite.svg';
-import chat from '../assets/images/chat.svg';
-
-export interface ICard {
-    image: string;
-    name: string;
-    description: string;
-    likes: number;
-    comments: number;
-    id: number;
-}
+import favorite from '../../assets/images/favorite.svg';
+import chat from '../../assets/images/chat.svg';
+import {ICard} from '../../utils/interface';
 
 class Card extends React.Component<ICard> {
 

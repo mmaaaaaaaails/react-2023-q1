@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './about.module.scss';
-import Header from './Header';
+import Header from '../header/Header';
 
 class About extends React.Component<unknown> {
 
