@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './form.module.scss';
 import Header from '../header/Header';
 import CardDataForm from '../cardDataForm/CardDataForm';
-import {CardsState, ICardDataForm} from '../../utils/interface';
+import {CardsState, ICardDataForm} from '../../utils/help';
 
 const cities:string[] = ['Minsk', 'London', 'Paris'];
 

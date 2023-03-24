@@ -6,7 +6,7 @@ import About from './components/about/About'
 import NotFoundPage from './components/notFound/NotFoundPage'
 import Form from './components/form/Form';
 
-function App() {
+const App = () => {
   return (
     <div className={styles.app}>
         <Routes>

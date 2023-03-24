@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './card.module.scss';
 import favorite from '../../assets/images/favorite.svg';
 import chat from '../../assets/images/chat.svg';
-import {ICard} from '../../utils/interface';
+import {CardInfo} from '../../utils/help';
 
-class Card extends React.Component<ICard> {
+class Card extends React.Component<CardInfo> {
 
     render() {
         return (

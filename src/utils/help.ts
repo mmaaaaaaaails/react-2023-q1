@@ -7,7 +7,11 @@ export interface ICardDataForm {
     radio: string;
 }
 
-export interface ICard {
+export interface CardsState {
+    cards: string[]
+}
+
+export type CardInfo = {
     image: string;
     name: string;
     description: string;
@@ -16,6 +20,5 @@ export interface ICard {
     id: number;
 }
 
-export interface CardsState {
-    cards: string[]
-}
+export type GetCardInfoResponse = CardInfo[];
+

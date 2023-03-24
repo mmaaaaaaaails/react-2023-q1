@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './cardDataForm.module.scss';
-import {ICardDataForm} from '../../utils/interface';
+import {ICardDataForm} from '../../utils/help';
 
 class CardDataForm extends React.Component<ICardDataForm> {
 
