@@ -2,32 +2,30 @@ import React from 'react';
 import styles from './cardDataForm.module.scss';
 import {ICardDataForm} from '../../utils/help';
 
-class CardDataForm extends React.Component<ICardDataForm> {
+const CardDataForm: React.FC<ICardDataForm> = ({ name, zipCode, birthday, select, radio,image }) => {
 
-    render() {
-        return (
-            <div className={styles.container}>
-                <div className={styles.info}>
-                    <p className={styles.title}>Name:
-                        <span className={styles.text}>{this.props.name}</span>
-                    </p>
-                    <p className={styles.title}>ZipCode:
-                        <span className={styles.text}>{this.props.zipCode}</span>
-                    </p>
-                    <p className={styles.title}>Birthday:
-                        <span className={styles.text}>{this.props.birthday}</span>
-                    </p>
-                    <p className={styles.title}>Location:
-                        <span className={styles.text}>{this.props.select}</span>
-                    </p>
-                    <p className={styles.title}>Gender:
-                        <span className={styles.text}>{this.props.radio}</span>
-                    </p>
-                </div>
-                <img className={styles.img} src={this.props.image} alt="photo" />
+    return (
+        <div className={styles.container}>
+            <div className={styles.info}>
+                <p className={styles.title}>Name:
+                    <span className={styles.text}>{name}</span>
+                </p>
+                <p className={styles.title}>ZipCode:
+                    <span className={styles.text}>{zipCode}</span>
+                </p>
+                <p className={styles.title}>Birthday:
+                    <span className={styles.text}>{birthday}</span>
+                </p>
+                <p className={styles.title}>Location:
+                    <span className={styles.text}>{select}</span>
+                </p>
+                <p className={styles.title}>Gender:
+                    <span className={styles.text}>{radio}</span>
+                </p>
             </div>
-        );
-    }
+            <img className={styles.img} src={image} alt="photo" />
+        </div>
+    );
 }
 
 export default CardDataForm;
